@@ -1,0 +1,135 @@
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 100px 3fr 2fr;
+    grid-template-rows: 100px 1fr 1fr;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+textarea, textarea::placeholder {
+    font-size: 3.2rem;
+    color: var(--dark-blue-300);
+    line-height: 150%;
+}
+
+textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+.content-btn {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: flex-end;
+}
+
+.btns, .info i {
+    display: flex;
+    align-items: center;
+}
+
+.info i {
+    gap: 8px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-style: normal;
+}
+
+.btns {
+    gap: 24px;
+}
+
+.btns button {
+    flex: 1;
+}
+
+.content-right {
+    max-width: 400px;
+    grid-column: 3;
+    grid-row: 1 / -1;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    justify-self: center;
+    text-align: center;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-right textarea {
+    display: none;
+}
+
+.content-right h2 {
+    font-size: 2.4rem;
+    color: var(--gray-400);
+    line-height: 110%;
+    margin-top: 36px;
+    margin-bottom: 16px;
+}
+
+.content-right p {
+    font-size: 1.6rem;
+    color: var(--gray-400);
+}
+
+.content-right button {
+    justify-self: left;
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: 100px 1fr 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .content-btn {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .content-right {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 5vh;
+        max-width: 100%;
+    }
+
+    #display-none img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .btns {
+        flex-direction: column;
+        align-items: normal;
+        gap: 12px;
+    }
+}

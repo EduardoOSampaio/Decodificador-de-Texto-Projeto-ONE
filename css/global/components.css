@@ -1,0 +1,27 @@
+button {
+    padding: 20px;
+    border-radius: 24px;
+    font-size: 1.6rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue-400);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-blue-200);
+}
