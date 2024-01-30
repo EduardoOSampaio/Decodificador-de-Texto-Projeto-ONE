@@ -104,19 +104,12 @@ textarea:focus::placeholder {
         grid-template-columns: 1fr;
     }
 
-    .content {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .content-btn {
+    .content, .content-btn, .content-right {
         grid-column: 1;
         grid-row: auto;
     }
 
     .content-right {
-        grid-column: 1;
-        grid-row: auto;
         margin-top: 5vh;
         max-width: 100%;
     }
